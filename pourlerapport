@@ -1,3 +1,0 @@
-si erreur > 128 alors on met la valeur à 128
-si < -128 on la met à -128
-et on peut mettre un compteur du nb de pixels en dehors
