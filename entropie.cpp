@@ -47,12 +47,14 @@ int main(int argc, char* argv[])
     float entropie = 0; 
 
     for (int i = 0; i < 256; i++) {
-        entropie += tabProba[i] * log2(tabProba[i]);
+        if (tabProba[i] > 0) {
+            entropie += tabProba[i] * log2(tabProba[i]);
+        }
     }
 
     entropie *= -1;
 
-    std::cout << "L'entropie est de : " << entropie << " bits/pixel" << std::endl;
+    std::cout << "L'entropie est de : " << entropie << std::endl;
 
 
    free(ImgIn);
